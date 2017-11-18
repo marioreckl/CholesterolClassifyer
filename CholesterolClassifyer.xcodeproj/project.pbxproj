@@ -81,6 +81,7 @@
 		AC9ED12C1FC0A9FD00F28CC1 /* VisualRecognitionV3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC9ED0DC1FC0A9D400F28CC1 /* VisualRecognitionV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC9ED1301FC0B80600F28CC1 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ED12F1FC0B80600F28CC1 /* QuestionsView.swift */; };
 		AC9ED1321FC0B81300F28CC1 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ED1311FC0B81300F28CC1 /* ResultsView.swift */; };
+		AC9ED1341FC0E67400F28CC1 /* download-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC9ED1331FC0E67300F28CC1 /* download-1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -212,6 +213,7 @@
 		AC9ED0DD1FC0A9D400F28CC1 /* VisualRecognitionV3.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = VisualRecognitionV3.framework.dSYM; sourceTree = "<group>"; };
 		AC9ED12F1FC0B80600F28CC1 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
 		AC9ED1311FC0B81300F28CC1 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		AC9ED1331FC0E67300F28CC1 /* download-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "download-1.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 				AC9ED0891FC09CFA00F28CC1 /* ViewController.swift */,
 				AC9ED0871FC09B7900F28CC1 /* CameraController.swift */,
 				AC9ED07B1FC093AB00F28CC1 /* InitailView.swift */,
+				AC9ED1331FC0E67300F28CC1 /* download-1.jpg */,
 				AC9ECFB01FC0901600F28CC1 /* Main.storyboard */,
 				AC9ED12F1FC0B80600F28CC1 /* QuestionsView.swift */,
 				AC9ED1311FC0B81300F28CC1 /* ResultsView.swift */,
@@ -566,6 +569,7 @@
 				AC9ED0F81FC0A9D400F28CC1 /* 9F327FA7-1984-3007-8E79-E63A3876DE1D.bcsymbolmap in Resources */,
 				AC9ED0EE1FC0A9D400F28CC1 /* 5F4127E6-1386-3A5A-BDEA-12C569388C1A.bcsymbolmap in Resources */,
 				AC9ECFBA1FC0901600F28CC1 /* LaunchScreen.storyboard in Resources */,
+				AC9ED1341FC0E67400F28CC1 /* download-1.jpg in Resources */,
 				AC9ED0F21FC0A9D400F28CC1 /* 7731026F-8E90-3466-9C24-E6FF24223B61.bcsymbolmap in Resources */,
 				AC9ED1081FC0A9D400F28CC1 /* DialogV1.framework.dSYM in Resources */,
 				AC9ED0E61FC0A9D400F28CC1 /* 29B64F6B-B878-3691-8685-6B39C3457E0D.bcsymbolmap in Resources */,

@@ -43,5 +43,7 @@
 	</array>
 	<key>NSCameraUsageDescription</key>
 	<string>This app would like to access you camera</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Yo let us in, nothin sketch brah</string>
 </dict>
 </plist>

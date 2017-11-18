@@ -10,48 +10,70 @@ import Foundation
 import UIKit
 import VisualRecognitionV3
 @available(iOS 11.0, *)
-class InitailView: UIViewController, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate{
+class InitailView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     let apiKey = "8d7aced8efa9ce11cca985d203dce5989cc20148"
     let version = "2017-08-10" // use today's date for the most recent version
     
     
-    @IBOutlet var capturePreviewView: UIView!
+    let picker = UIImagePickerController()
     
-    let cameraController = CameraController()
+    var imageURLOLD: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        /*func configureCameraController() {
-            cameraController.prepare {(error) in
-                if let error = error {
-                    print(error)
-                }
-                
-                try? self.cameraController.displayPreview(on: self.capturePreviewView)
-            }
-        }
-        
-        configureCameraController()*/
+        picker.delegate = self
     }
-    /*@IBAction func scan(_ sender: Any) {
-        print("pressed")
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            var imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .camera;
-            imagePicker.allowsEditing = false
-            print("all good")
-            //self.presentViewController(imagePicker, animated: true, completion: nil)
-        }
-    }*/
     @IBAction func scan(_ sender: Any) {
-        let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
+     if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+     let imagePicker = UIImagePickerController()
+     imagePicker.delegate = self
+     imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+     imagePicker.allowsEditing = false
+     self.present(imagePicker, animated: true, completion: nil)
+     }
+    }
+    func saveImage(image: UIImage) -> () {
+        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(path:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
+    @objc private func image(path: String, didFinishSavingWithError error: NSError?, contextInfo: UnsafeMutableRawPointer?) {
+        //analyse(path: path)
+        debugPrint(path) // That's the path you want
+    }
+    
+   /* func saveToDocs(image: UIImage) throws -> URL  {
+        let imagePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let imageURL = imagePath.appendingPathComponent("\(UUID()).jpeg")
+        let jpegData = UIImageJPEGRepresentation(image, 0.5)
+        try jpegData?.write(to: imageURL, options: .atomic)
+        imageURLOLD = imageURL
+        return imageURL
+    }*/
+    /*func removeImage() {
         
-        let image = NSURL(fileURLWithPath: "Grey_eye_G5wCD.jpg")
-        let imageSelf = Bundle.main.url(forResource: "Grey_eye_G5wCD", withExtension: "jpg")
-        print(imageSelf!);
+        let filePath = imageURLOLD
+        do {
+            try FileManager.default.removeItem(at: filePath!)
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }}*/
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        print("here2")
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage//info[UIImagePickerControllerReferenceURL] as? URL
+
+        var path = try! saveToDocs(image: pickedImage)
+        analyse(path: path)
+        removeImage()
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func analyse(path: URL) {
+        let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
+        print("in")
+        
+        //let imageSelf = Bundle.main.url(forResource: path, withExtension: "jpg")!//(forResource: path)//Bundle.main.url(forAuxiliaryExecutable: image)
+        //print(imageSelf);
         
 //        let jsonObject = {
 //            "images": image
@@ -59,8 +81,8 @@ UINavigationControllerDelegate{
 
         let failure = { (error: Error) in print(error) }
         let classifierID:[String] = ["Untitled_1788328397"]
-        
-        visualRecognition.classify(imageFile: imageSelf!, classifierIDs:classifierID , language: "en", failure: failure) { classifiedImages in
+        print("starting")
+        visualRecognition.classify(imageFile: path, classifierIDs: classifierID , language: "en", failure: failure) { classifiedImages in
             print(classifiedImages)}
         
         /*visualRecognition.classify(classifierID,) { classifiedImages in
@@ -74,5 +96,13 @@ UINavigationControllerDelegate{
     /*visualRecognition.classify(image: "https://www.google.ca/search?q=eye&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj104Wh-MjXAhVCy1QKHXXWBnUQ_AUICigB&biw=1280&bih=726#imgrc=IJ6fjoYvmPagyM:", classifierIDs:classifierID , language: "en", failure: failure) { classifiedImages in
     print(classifiedImages)
     }*/
-    
+    //MARK: - Delegates
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
+        
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+    }
 }

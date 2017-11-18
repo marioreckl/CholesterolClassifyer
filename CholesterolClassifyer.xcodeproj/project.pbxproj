@@ -1,0 +1,580 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC9ECFAD1FC0901600F28CC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ECFAC1FC0901600F28CC1 /* AppDelegate.swift */; };
+		AC9ECFAF1FC0901600F28CC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ECFAE1FC0901600F28CC1 /* ViewController.swift */; };
+		AC9ECFB21FC0901600F28CC1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9ECFB01FC0901600F28CC1 /* Main.storyboard */; };
+		AC9ECFB51FC0901600F28CC1 /* CholesterolClassifyer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC9ECFB31FC0901600F28CC1 /* CholesterolClassifyer.xcdatamodeld */; };
+		AC9ECFB71FC0901600F28CC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9ECFB61FC0901600F28CC1 /* Assets.xcassets */; };
+		AC9ECFBA1FC0901600F28CC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC9ECFB81FC0901600F28CC1 /* LaunchScreen.storyboard */; };
+		AC9ECFC51FC0901700F28CC1 /* CholesterolClassifyerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ECFC41FC0901700F28CC1 /* CholesterolClassifyerTests.swift */; };
+		AC9ECFD01FC0901700F28CC1 /* CholesterolClassifyerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ECFCF1FC0901700F28CC1 /* CholesterolClassifyerUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC9ECFC11FC0901700F28CC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9ECFA11FC0901500F28CC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC9ECFA81FC0901600F28CC1;
+			remoteInfo = CholesterolClassifyer;
+		};
+		AC9ECFCC1FC0901700F28CC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC9ECFA11FC0901500F28CC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC9ECFA81FC0901600F28CC1;
+			remoteInfo = CholesterolClassifyer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC9ECFA91FC0901600F28CC1 /* CholesterolClassifyer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CholesterolClassifyer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9ECFAC1FC0901600F28CC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC9ECFAE1FC0901600F28CC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC9ECFB11FC0901600F28CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC9ECFB41FC0901600F28CC1 /* CholesterolClassifyer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CholesterolClassifyer.xcdatamodel; sourceTree = "<group>"; };
+		AC9ECFB61FC0901600F28CC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC9ECFB91FC0901600F28CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC9ECFBB1FC0901600F28CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC9ECFC01FC0901700F28CC1 /* CholesterolClassifyerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CholesterolClassifyerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9ECFC41FC0901700F28CC1 /* CholesterolClassifyerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CholesterolClassifyerTests.swift; sourceTree = "<group>"; };
+		AC9ECFC61FC0901700F28CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC9ECFCB1FC0901700F28CC1 /* CholesterolClassifyerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CholesterolClassifyerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC9ECFCF1FC0901700F28CC1 /* CholesterolClassifyerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CholesterolClassifyerUITests.swift; sourceTree = "<group>"; };
+		AC9ECFD11FC0901700F28CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC9ECFA61FC0901600F28CC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC9ECFBD1FC0901700F28CC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC9ECFC81FC0901700F28CC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC9ECFA01FC0901500F28CC1 = {
+			isa = PBXGroup;
+			children = (
+				AC9ECFAB1FC0901600F28CC1 /* CholesterolClassifyer */,
+				AC9ECFC31FC0901700F28CC1 /* CholesterolClassifyerTests */,
+				AC9ECFCE1FC0901700F28CC1 /* CholesterolClassifyerUITests */,
+				AC9ECFAA1FC0901600F28CC1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC9ECFAA1FC0901600F28CC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC9ECFA91FC0901600F28CC1 /* CholesterolClassifyer.app */,
+				AC9ECFC01FC0901700F28CC1 /* CholesterolClassifyerTests.xctest */,
+				AC9ECFCB1FC0901700F28CC1 /* CholesterolClassifyerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC9ECFAB1FC0901600F28CC1 /* CholesterolClassifyer */ = {
+			isa = PBXGroup;
+			children = (
+				AC9ECFAC1FC0901600F28CC1 /* AppDelegate.swift */,
+				AC9ECFAE1FC0901600F28CC1 /* ViewController.swift */,
+				AC9ECFB01FC0901600F28CC1 /* Main.storyboard */,
+				AC9ECFB61FC0901600F28CC1 /* Assets.xcassets */,
+				AC9ECFB81FC0901600F28CC1 /* LaunchScreen.storyboard */,
+				AC9ECFBB1FC0901600F28CC1 /* Info.plist */,
+				AC9ECFB31FC0901600F28CC1 /* CholesterolClassifyer.xcdatamodeld */,
+			);
+			path = CholesterolClassifyer;
+			sourceTree = "<group>";
+		};
+		AC9ECFC31FC0901700F28CC1 /* CholesterolClassifyerTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC9ECFC41FC0901700F28CC1 /* CholesterolClassifyerTests.swift */,
+				AC9ECFC61FC0901700F28CC1 /* Info.plist */,
+			);
+			path = CholesterolClassifyerTests;
+			sourceTree = "<group>";
+		};
+		AC9ECFCE1FC0901700F28CC1 /* CholesterolClassifyerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC9ECFCF1FC0901700F28CC1 /* CholesterolClassifyerUITests.swift */,
+				AC9ECFD11FC0901700F28CC1 /* Info.plist */,
+			);
+			path = CholesterolClassifyerUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC9ECFA81FC0901600F28CC1 /* CholesterolClassifyer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC9ECFD41FC0901700F28CC1 /* Build configuration list for PBXNativeTarget "CholesterolClassifyer" */;
+			buildPhases = (
+				AC9ECFA51FC0901600F28CC1 /* Sources */,
+				AC9ECFA61FC0901600F28CC1 /* Frameworks */,
+				AC9ECFA71FC0901600F28CC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CholesterolClassifyer;
+			productName = CholesterolClassifyer;
+			productReference = AC9ECFA91FC0901600F28CC1 /* CholesterolClassifyer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC9ECFBF1FC0901700F28CC1 /* CholesterolClassifyerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC9ECFD71FC0901700F28CC1 /* Build configuration list for PBXNativeTarget "CholesterolClassifyerTests" */;
+			buildPhases = (
+				AC9ECFBC1FC0901700F28CC1 /* Sources */,
+				AC9ECFBD1FC0901700F28CC1 /* Frameworks */,
+				AC9ECFBE1FC0901700F28CC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC9ECFC21FC0901700F28CC1 /* PBXTargetDependency */,
+			);
+			name = CholesterolClassifyerTests;
+			productName = CholesterolClassifyerTests;
+			productReference = AC9ECFC01FC0901700F28CC1 /* CholesterolClassifyerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC9ECFCA1FC0901700F28CC1 /* CholesterolClassifyerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC9ECFDA1FC0901700F28CC1 /* Build configuration list for PBXNativeTarget "CholesterolClassifyerUITests" */;
+			buildPhases = (
+				AC9ECFC71FC0901700F28CC1 /* Sources */,
+				AC9ECFC81FC0901700F28CC1 /* Frameworks */,
+				AC9ECFC91FC0901700F28CC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC9ECFCD1FC0901700F28CC1 /* PBXTargetDependency */,
+			);
+			name = CholesterolClassifyerUITests;
+			productName = CholesterolClassifyerUITests;
+			productReference = AC9ECFCB1FC0901700F28CC1 /* CholesterolClassifyerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC9ECFA11FC0901500F28CC1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Mario Reckl";
+				TargetAttributes = {
+					AC9ECFA81FC0901600F28CC1 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					AC9ECFBF1FC0901700F28CC1 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AC9ECFA81FC0901600F28CC1;
+					};
+					AC9ECFCA1FC0901700F28CC1 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = AC9ECFA81FC0901600F28CC1;
+					};
+				};
+			};
+			buildConfigurationList = AC9ECFA41FC0901500F28CC1 /* Build configuration list for PBXProject "CholesterolClassifyer" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC9ECFA01FC0901500F28CC1;
+			productRefGroup = AC9ECFAA1FC0901600F28CC1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC9ECFA81FC0901600F28CC1 /* CholesterolClassifyer */,
+				AC9ECFBF1FC0901700F28CC1 /* CholesterolClassifyerTests */,
+				AC9ECFCA1FC0901700F28CC1 /* CholesterolClassifyerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC9ECFA71FC0901600F28CC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9ECFBA1FC0901600F28CC1 /* LaunchScreen.storyboard in Resources */,
+				AC9ECFB71FC0901600F28CC1 /* Assets.xcassets in Resources */,
+				AC9ECFB21FC0901600F28CC1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC9ECFBE1FC0901700F28CC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC9ECFC91FC0901700F28CC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC9ECFA51FC0901600F28CC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9ECFAF1FC0901600F28CC1 /* ViewController.swift in Sources */,
+				AC9ECFAD1FC0901600F28CC1 /* AppDelegate.swift in Sources */,
+				AC9ECFB51FC0901600F28CC1 /* CholesterolClassifyer.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC9ECFBC1FC0901700F28CC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9ECFC51FC0901700F28CC1 /* CholesterolClassifyerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC9ECFC71FC0901700F28CC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC9ECFD01FC0901700F28CC1 /* CholesterolClassifyerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC9ECFC21FC0901700F28CC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC9ECFA81FC0901600F28CC1 /* CholesterolClassifyer */;
+			targetProxy = AC9ECFC11FC0901700F28CC1 /* PBXContainerItemProxy */;
+		};
+		AC9ECFCD1FC0901700F28CC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC9ECFA81FC0901600F28CC1 /* CholesterolClassifyer */;
+			targetProxy = AC9ECFCC1FC0901700F28CC1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC9ECFB01FC0901600F28CC1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC9ECFB11FC0901600F28CC1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC9ECFB81FC0901600F28CC1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC9ECFB91FC0901600F28CC1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC9ECFD21FC0901700F28CC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC9ECFD31FC0901700F28CC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC9ECFD51FC0901700F28CC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JE8BVF7K2;
+				INFOPLIST_FILE = CholesterolClassifyer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mario.inc.CholesterolClassifyer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC9ECFD61FC0901700F28CC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JE8BVF7K2;
+				INFOPLIST_FILE = CholesterolClassifyer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mario.inc.CholesterolClassifyer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC9ECFD81FC0901700F28CC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JE8BVF7K2;
+				INFOPLIST_FILE = CholesterolClassifyerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mario.inc.CholesterolClassifyerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CholesterolClassifyer.app/CholesterolClassifyer";
+			};
+			name = Debug;
+		};
+		AC9ECFD91FC0901700F28CC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JE8BVF7K2;
+				INFOPLIST_FILE = CholesterolClassifyerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mario.inc.CholesterolClassifyerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CholesterolClassifyer.app/CholesterolClassifyer";
+			};
+			name = Release;
+		};
+		AC9ECFDB1FC0901700F28CC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JE8BVF7K2;
+				INFOPLIST_FILE = CholesterolClassifyerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mario.inc.CholesterolClassifyerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CholesterolClassifyer;
+			};
+			name = Debug;
+		};
+		AC9ECFDC1FC0901700F28CC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JE8BVF7K2;
+				INFOPLIST_FILE = CholesterolClassifyerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Mario.inc.CholesterolClassifyerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CholesterolClassifyer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC9ECFA41FC0901500F28CC1 /* Build configuration list for PBXProject "CholesterolClassifyer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC9ECFD21FC0901700F28CC1 /* Debug */,
+				AC9ECFD31FC0901700F28CC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC9ECFD41FC0901700F28CC1 /* Build configuration list for PBXNativeTarget "CholesterolClassifyer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC9ECFD51FC0901700F28CC1 /* Debug */,
+				AC9ECFD61FC0901700F28CC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC9ECFD71FC0901700F28CC1 /* Build configuration list for PBXNativeTarget "CholesterolClassifyerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC9ECFD81FC0901700F28CC1 /* Debug */,
+				AC9ECFD91FC0901700F28CC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC9ECFDA1FC0901700F28CC1 /* Build configuration list for PBXNativeTarget "CholesterolClassifyerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC9ECFDB1FC0901700F28CC1 /* Debug */,
+				AC9ECFDC1FC0901700F28CC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC9ECFB31FC0901600F28CC1 /* CholesterolClassifyer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC9ECFB41FC0901600F28CC1 /* CholesterolClassifyer.xcdatamodel */,
+			);
+			currentVersion = AC9ECFB41FC0901600F28CC1 /* CholesterolClassifyer.xcdatamodel */;
+			path = CholesterolClassifyer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AC9ECFA11FC0901500F28CC1 /* Project object */;
+}

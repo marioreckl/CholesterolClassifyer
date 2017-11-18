@@ -1,0 +1,74 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "v0.19.0",
+  "iOS" : [
+    {
+      "name" : "PersonalityInsightsV3",
+      "hash" : "140132be7eaa602fce2644d7636f267480a9469a464bf07623a66f6f33f192c8"
+    },
+    {
+      "name" : "AlchemyVisionV1",
+      "hash" : "d532a1202d117977d13a59d43b1d83c97a8fb958dd01e584e6d7393ee1ef709f"
+    },
+    {
+      "name" : "PersonalityInsightsV2",
+      "hash" : "ee858bc58cd75fd179d4c7f8dffd1555104bc2327658517d657da34c4d9d70f8"
+    },
+    {
+      "name" : "DocumentConversionV1",
+      "hash" : "d1308d21aa58dca0165ba280105e0730d42da60ff8d65d3e9e478da7a4e26177"
+    },
+    {
+      "name" : "DialogV1",
+      "hash" : "18a20881fdc5a86e0761294af6da391357b2a16f3e01ab86088a60b85e908b37"
+    },
+    {
+      "name" : "TradeoffAnalyticsV1",
+      "hash" : "0fe96d3c0e39bb86a47815c0a4fe8b21d6cac026783984764fd9cfff61a6283d"
+    },
+    {
+      "name" : "RetrieveAndRankV1",
+      "hash" : "2dc9d18e4598878113ae28ff997c32c9281abae2834bd9462c64d0d42106ef03"
+    },
+    {
+      "name" : "VisualRecognitionV3",
+      "hash" : "1d7c7ad12954bfe55ff474404023f0ff97779c8c779dd41693ba7ed41dcbed5c"
+    },
+    {
+      "name" : "AlchemyDataNewsV1",
+      "hash" : "a082cf9c40432a715274a8339fb305568f3b11ad25d28eb783bf84f139f87b9f"
+    },
+    {
+      "name" : "TextToSpeechV1",
+      "hash" : "56c378cae6a6c29b97deec9429cea8e2c4af5c0f4c8639aa2d947be22d052831"
+    },
+    {
+      "name" : "NaturalLanguageUnderstandingV1",
+      "hash" : "0c40ec7164cfa89739e0442ba2a157c6abc550b5f317ac905ae5b23d99413350"
+    },
+    {
+      "name" : "AlchemyLanguageV1",
+      "hash" : "87f0090518428497b6f9ca0ca4eb49ba3c4387276933bd121ae7edc535f8567b"
+    },
+    {
+      "name" : "SpeechToTextV1",
+      "hash" : "c8b5b1b1185cee064462acd4cd15867bffa7f2767f19514ee4a6745fdad42a30"
+    },
+    {
+      "name" : "ConversationV1",
+      "hash" : "10352fc2ead0b46815e1e83831236b59611fcd643f889b6612bee08d1ff703c4"
+    },
+    {
+      "name" : "DiscoveryV1",
+      "hash" : "2efdb2d28551adaec3bda1a64361525735b62a79849255f63d401e607b134c4a"
+    }
+  ]
+}

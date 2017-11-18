@@ -130,7 +130,7 @@
 		AC9ECFD11FC0901700F28CC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC9ECFDD1FC0913500F28CC1 /* background2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background2.png; sourceTree = "<group>"; };
 		AC9ED07B1FC093AB00F28CC1 /* InitailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitailView.swift; sourceTree = "<group>"; };
-		AC9ED07F1FC094AC00F28CC1 /* Grey_eye_G5wCD.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grey_eye_G5wCD.jpg; sourceTree = "<group>"; };
+		AC9ED07F1FC094AC00F28CC1 /* Grey_eye_G5wCD.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Grey_eye_G5wCD.jpg; path = CholesterolClassifyer/Grey_eye_G5wCD.jpg; sourceTree = SOURCE_ROOT; };
 		AC9ED0871FC09B7900F28CC1 /* CameraController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraController.swift; sourceTree = "<group>"; };
 		AC9ED0891FC09CFA00F28CC1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AC9ED0901FC0A9D300F28CC1 /* .swift-sdk.version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".swift-sdk.version"; sourceTree = "<group>"; };
@@ -248,7 +248,6 @@
 				AC9ECFCE1FC0901700F28CC1 /* CholesterolClassifyerUITests */,
 				AC9ECFAA1FC0901600F28CC1 /* Products */,
 				AC9ECFDD1FC0913500F28CC1 /* background2.png */,
-				AC9ED07F1FC094AC00F28CC1 /* Grey_eye_G5wCD.jpg */,
 				AC9ED08E1FC0A9D300F28CC1 /* Carthage */,
 				AC9ED12E1FC0AAF200F28CC1 /* Frameworks */,
 			);
@@ -275,6 +274,7 @@
 				AC9ED12F1FC0B80600F28CC1 /* QuestionsView.swift */,
 				AC9ED1311FC0B81300F28CC1 /* ResultsView.swift */,
 				AC9ECFB61FC0901600F28CC1 /* Assets.xcassets */,
+				AC9ED07F1FC094AC00F28CC1 /* Grey_eye_G5wCD.jpg */,
 				AC9ECFB81FC0901600F28CC1 /* LaunchScreen.storyboard */,
 				AC9ECFBB1FC0901600F28CC1 /* Info.plist */,
 				AC9ECFB31FC0901600F28CC1 /* CholesterolClassifyer.xcdatamodeld */,

@@ -35,7 +35,7 @@ UINavigationControllerDelegate{
         
         configureCameraController()*/
     }
-    @IBAction func scan(_ sender: Any) {
+    /*@IBAction func scan(_ sender: Any) {
         print("pressed")
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             var imagePicker = UIImagePickerController()
@@ -45,30 +45,34 @@ UINavigationControllerDelegate{
             print("all good")
             //self.presentViewController(imagePicker, animated: true, completion: nil)
         }
-    }
-   /* @IBAction func scan(_ sender: Any) {
+    }*/
+    @IBAction func scan(_ sender: Any) {
         let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
         
-        let image = #imageLiteral(resourceName: "Grey_eye_G5wCD.jpg")
-        let failure = { (error: Error) in print(error) }
+        let image = NSURL(fileURLWithPath: "Grey_eye_G5wCD.jpg")
+        let imageSelf = Bundle.main.url(forResource: "Grey_eye_G5wCD", withExtension: "jpg")
+        print(imageSelf!);
         
-        /*visualRecognition.classify(imageFile: image, classifierIDs: "Untitled_841215900", failure: failure) { classifiedImages in
-            print(classifiedImages)*/
-        //}
-    }*/
+//        let jsonObject = {
+//            "images": image
+//        }
+
+        let failure = { (error: Error) in print(error) }
+        let classifierID:[String] = ["Untitled_1788328397"]
+        
+        visualRecognition.classify(imageFile: imageSelf!, classifierIDs:classifierID , language: "en", failure: failure) { classifiedImages in
+            print(classifiedImages)}
+        
+        /*visualRecognition.classify(classifierID,) { classifiedImages in
+            print(classifiedImages)
+        }*/
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   func analyse(){
-        let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
-        
-        let image = "#imageLiteral(resourceName: Grey_eye_G5wCD.jpg)"
-        let failure = { (error: Error) in print(error) }
-        
-        visualRecognition.classify(image: image, failure: failure) { classifiedImages in
-            print(classifiedImages)
-        }
-    }
+    /*visualRecognition.classify(image: "https://www.google.ca/search?q=eye&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj104Wh-MjXAhVCy1QKHXXWBnUQ_AUICigB&biw=1280&bih=726#imgrc=IJ6fjoYvmPagyM:", classifierIDs:classifierID , language: "en", failure: failure) { classifiedImages in
+    print(classifiedImages)
+    }*/
     
 }

@@ -10,6 +10,7 @@ import Foundation
 import AVFoundation
 import UIKit
 
+@available(iOS 11.0, *)
 class CameraController {
     
     var captureSession: AVCaptureSession?
@@ -56,7 +57,11 @@ class CameraController {
             guard let captureSession = self.captureSession else { throw CameraControllerError.captureSessionIsMissing }
             
             self.photoOutput = AVCapturePhotoOutput()
-            self.photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
+            if #available(iOS 11.0, *) {
+                self.photoOutput!.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey : AVVideoCodecType.jpeg])], completionHandler: nil)
+            } else {
+                // Fallback on earlier versions
+            }
             
             if captureSession.canAddOutput(self.photoOutput!) { captureSession.addOutput(self.photoOutput!) }
             
@@ -96,6 +101,7 @@ class CameraController {
     }
 }
 
+@available(iOS 11.0, *)
 extension CameraController {
     enum CameraControllerError: Swift.Error {
         case captureSessionAlreadyRunning

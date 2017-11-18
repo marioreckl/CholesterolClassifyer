@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,32 +15,45 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="InitailView" customModule="CholesterolClassifyer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-Gr-Dxt">
-                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="10" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Scan Yo Eye Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBH-LC-N9J">
-                                <rect key="frame" x="67" y="77" width="226" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Yo Eye Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBH-LC-N9J">
+                                <rect key="frame" x="0.0" y="85" width="320" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Yq7-fq-ETJ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-ei-yiR">
-                                <rect key="frame" x="124" y="270" width="113" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-ei-yiR">
+                                <rect key="frame" x="142.5" y="269" width="35" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hwt-Ic-7Xk"/>
+                                </constraints>
                                 <state key="normal" title="Scan">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLk-gn-K72"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="54g-hB-mLr"/>
+                            <constraint firstItem="Znk-ei-yiR" firstAttribute="centerY" secondItem="3Js-Gr-Dxt" secondAttribute="centerY" id="91e-tF-jLs"/>
+                            <constraint firstItem="uBH-LC-N9J" firstAttribute="leading" secondItem="3Js-Gr-Dxt" secondAttribute="leading" id="IIb-cG-2eH"/>
+                            <constraint firstItem="Znk-ei-yiR" firstAttribute="centerX" secondItem="3Js-Gr-Dxt" secondAttribute="centerX" id="K4E-sN-5XT"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uBH-LC-N9J" secondAttribute="trailing" id="NaC-VA-Gjv"/>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Y95-OA-f88"/>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c54-3T-lyS"/>
+                            <constraint firstItem="uBH-LC-N9J" firstAttribute="width" secondItem="3Js-Gr-Dxt" secondAttribute="width" id="gca-p7-8tx"/>
+                            <constraint firstItem="3Js-Gr-Dxt" firstAttribute="top" secondItem="uBH-LC-N9J" secondAttribute="bottom" constant="-125" id="qVl-fl-nEK"/>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ysj-D6-ckr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -49,6 +62,125 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>
+        </scene>
+        <!--Questions View-->
+        <scene sceneID="ahk-TC-nEh">
+            <objects>
+                <viewController id="n7W-Cu-QHZ" customClass="QuestionsView" customModule="CholesterolClassifyer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p7o-9Y-xjS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bp7-ba-zAe">
+                                <rect key="frame" x="0.0" y="10" width="320" height="568"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="18" maxValue="99" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-jE-9bT">
+                                <rect key="frame" x="97" y="269" width="209" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPA-yK-BiF">
+                                <rect key="frame" x="16" y="269" width="57" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tf7-AT-VWO">
+                                <rect key="frame" x="74" y="84" width="230" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Have you been diagnosed with high blood pressure">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name=".SFNSText"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSX-0s-OU4">
+                                <rect key="frame" x="74" y="152" width="230" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Have you been diagnosed with high cholesterol?">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="19" name=".SFNSText"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                            <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B3y-FF-eUj">
+                                <rect key="frame" x="16" y="92" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="THb-Mc-tU5">
+                                <rect key="frame" x="17" y="160" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="onTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bp7-ba-zAe" firstAttribute="height" secondItem="p7o-9Y-xjS" secondAttribute="height" id="65b-gA-Phi"/>
+                            <constraint firstItem="Bp7-ba-zAe" firstAttribute="centerY" secondItem="Mb1-nM-zn3" secondAttribute="centerY" id="Er8-9Z-8qP"/>
+                            <constraint firstItem="Bp7-ba-zAe" firstAttribute="centerX" secondItem="Mb1-nM-zn3" secondAttribute="centerX" id="Lxo-Cf-N0j"/>
+                            <constraint firstItem="Bp7-ba-zAe" firstAttribute="width" secondItem="p7o-9Y-xjS" secondAttribute="width" id="u1Y-dy-fU6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mb1-nM-zn3"/>
+                    </view>
+                    <connections>
+                        <outlet property="AgeSlider" destination="Dzl-jE-9bT" id="7WC-qQ-E23"/>
+                        <outlet property="SwitchForHighBP" destination="B3y-FF-eUj" id="v59-lo-jP5"/>
+                        <outlet property="SwitchForHighCholesterol" destination="THb-Mc-tU5" id="6yj-B3-7UK"/>
+                        <outlet property="slide" destination="B3y-FF-eUj" id="BPX-CX-Xsf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyo-E6-gZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892.5" y="32.74647887323944"/>
+        </scene>
+        <!--Results View-->
+        <scene sceneID="aYY-8z-haW">
+            <objects>
+                <viewController id="e81-4v-fuL" customClass="ResultsView" customModule="CholesterolClassifyer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X59-rb-dVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="y6q-VV-lsn">
+                                <rect key="frame" x="0.0" y="10" width="320" height="568"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="806-E2-tiO">
+                                <rect key="frame" x="82" y="72" width="138" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="y6q-VV-lsn" firstAttribute="centerY" secondItem="Zjd-z1-ahh" secondAttribute="centerY" id="DKf-Il-CIN"/>
+                            <constraint firstItem="y6q-VV-lsn" firstAttribute="width" secondItem="X59-rb-dVZ" secondAttribute="width" id="pLi-Bt-j2Q"/>
+                            <constraint firstItem="y6q-VV-lsn" firstAttribute="centerX" secondItem="Zjd-z1-ahh" secondAttribute="centerX" id="vuN-lH-yUm"/>
+                            <constraint firstItem="y6q-VV-lsn" firstAttribute="height" secondItem="X59-rb-dVZ" secondAttribute="height" id="ySN-4E-M3F"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zjd-z1-ahh"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultsLabel" destination="806-E2-tiO" id="k6z-Vc-aFl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6pN-zv-9eQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762.5" y="32.74647887323944"/>
         </scene>
     </scenes>
     <resources>

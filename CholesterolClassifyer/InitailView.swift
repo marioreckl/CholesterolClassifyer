@@ -80,27 +80,25 @@ class InitailView: UIViewController, UIImagePickerControllerDelegate, UINavigati
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        print("here2")
         
         let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage//
         print(pickedImage)
         var localUrl = try! saveToDocs(image: pickedImage)//
+        picker.dismiss(animated: true, completion: nil)
         analyse(path: localUrl)
         
-        picker.dismiss(animated: true, completion: nil)
+        
     
     }
 
     func analyse(path: URL) {
-        let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
-        print("path")
-        print(path)
+        /*let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
         
         let imageSelf = Bundle.main.url(forResource: "download-1", withExtension: "jpg")!//(forResource: path)//Bundle.main.url(forAuxiliaryExecutable: image)
         print(imageSelf);
         
         let failure = { (error: Error) in print(error) }
-        let classifierID:[String] = ["Untitled_1208486641"]
+        let classifierID:[String] = ["Untitled_1766088879"]
         print("starting")
         visualRecognition.classify(imageFile: path, classifierIDs: classifierID , language: "en", failure: failure) { classifiedImages in
             print(classifiedImages)
@@ -111,6 +109,9 @@ class InitailView: UIViewController, UIImagePickerControllerDelegate, UINavigati
                     if(classification == "Negative"){
                         self.performSegue(withIdentifier: "healthyResults", sender: self)
                     }
+                    else if (classification == "Positive"){*/
+                        self.performSegue(withIdentifier: "ShowQuestions", sender: self)
+                    /*}
                 }
             }
             if let dictionary = classifiedImages as? [String: Any] {
@@ -121,7 +122,7 @@ class InitailView: UIViewController, UIImagePickerControllerDelegate, UINavigati
                 }
             }
             print("Classification")
-        }
+        }*/
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? ResultsView {

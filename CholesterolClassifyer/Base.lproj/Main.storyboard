@@ -26,15 +26,16 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Yq7-fq-ETJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-ei-yiR">
-                                <rect key="frame" x="142.5" y="269" width="35" height="50"/>
+                                <rect key="frame" x="128.5" y="344" width="63" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="hwt-Ic-7Xk"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" title="Scan">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -46,7 +47,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="54g-hB-mLr"/>
-                            <constraint firstItem="Znk-ei-yiR" firstAttribute="centerY" secondItem="3Js-Gr-Dxt" secondAttribute="centerY" id="91e-tF-jLs"/>
+                            <constraint firstItem="Znk-ei-yiR" firstAttribute="centerY" secondItem="3Js-Gr-Dxt" secondAttribute="centerY" constant="75" id="91e-tF-jLs"/>
                             <constraint firstItem="uBH-LC-N9J" firstAttribute="leading" secondItem="3Js-Gr-Dxt" secondAttribute="leading" id="IIb-cG-2eH"/>
                             <constraint firstItem="Znk-ei-yiR" firstAttribute="centerX" secondItem="3Js-Gr-Dxt" secondAttribute="centerX" id="K4E-sN-5XT"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uBH-LC-N9J" secondAttribute="trailing" id="NaC-VA-Gjv"/>
@@ -83,11 +84,14 @@
                                 <rect key="frame" x="97" y="269" width="209" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="n7W-Cu-QHZ" eventType="valueChanged" id="xHf-Qy-KJb"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPA-yK-BiF">
                                 <rect key="frame" x="16" y="269" width="57" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -119,24 +123,32 @@
                                 </attributedString>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <switch opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="B3y-FF-eUj">
-                                <rect key="frame" x="16" y="92" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="onTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="THb-Mc-tU5">
-                                <rect key="frame" x="17" y="160" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="onTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h9-eP-rn6">
-                                <rect key="frame" x="137" y="414" width="46" height="30"/>
+                                <rect key="frame" x="61" y="391" width="198" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Get Results">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="e81-4v-fuL" kind="show" identifier="ShowResults" id="Jp6-cP-6Fc"/>
+                                    <action selector="getResults:" destination="n7W-Cu-QHZ" eventType="touchUpInside" id="Qqb-2N-DCU"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5L-a7-i4c">
+                                <rect key="frame" x="158" y="306" width="59" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWv-0K-32b">
+                                <rect key="frame" x="16" y="100" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-Ky-loG">
+                                <rect key="frame" x="14" y="160" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -149,9 +161,11 @@
                     </view>
                     <connections>
                         <outlet property="AgeSlider" destination="Dzl-jE-9bT" id="7WC-qQ-E23"/>
-                        <outlet property="SwitchForHighBP" destination="B3y-FF-eUj" id="v59-lo-jP5"/>
-                        <outlet property="SwitchForHighCholesterol" destination="THb-Mc-tU5" id="6yj-B3-7UK"/>
-                        <outlet property="slide" destination="B3y-FF-eUj" id="BPX-CX-Xsf"/>
+                        <outlet property="GetResults" destination="4h9-eP-rn6" id="lla-K6-POf"/>
+                        <outlet property="SwitchForHighBP" destination="xWv-0K-32b" id="eMv-GL-frb"/>
+                        <outlet property="SwitchForHighCholesterol" destination="Na7-Ky-loG" id="E2T-Yp-sZr"/>
+                        <outlet property="ageLabel" destination="b5L-a7-i4c" id="cKV-1q-gbg"/>
+                        <segue destination="e81-4v-fuL" kind="show" identifier="ShowResults" id="emv-5o-16e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vyo-E6-gZH" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -172,7 +186,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="806-E2-tiO">
                                 <rect key="frame" x="82" y="72" width="138" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -199,6 +213,6 @@
         <image name="background2.png" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Hhw-Jc-jRi"/>
+        <segue reference="emv-5o-16e"/>
     </inferredMetricsTieBreakers>
 </document>

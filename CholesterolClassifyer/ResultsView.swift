@@ -14,6 +14,9 @@ class ResultsView: UIViewController {
     @IBOutlet var resultsLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    func viewWillAppear(){
+        print("results")
         resultsLabel.text = result
     }
     

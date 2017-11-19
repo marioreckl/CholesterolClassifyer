@@ -25,21 +25,23 @@ class InitailView: UIViewController, UIImagePickerControllerDelegate, UINavigati
         picker.delegate = self
     }
     @IBAction func scan(_ sender: Any) {
-     if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-     let imagePicker = UIImagePickerController()
-     imagePicker.delegate = self
-     imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-     imagePicker.allowsEditing = false
-     self.present(imagePicker, animated: true, completion: nil)
-     }
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            var imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera;
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
     }
     func saveImage(image: UIImage) -> () {
        print("save")
        UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
         
+        queryLastPhoto(resizeTo: CGSize.init(width: 500, height: 500))
     }
     
-    func queryLastPhoto(resizeTo size: CGSize?, queryCallback: @escaping ((UIImage?) -> Void)) {
+    func queryLastPhoto(resizeTo size: CGSize?) {
+        print("getting")
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: false)]
         
@@ -61,161 +63,76 @@ class InitailView: UIViewController, UIImagePickerControllerDelegate, UINavigati
                                              options: nil,
                                              resultHandler: { image, info in
                                                 
-                                                queryCallback(image)
+                                                print("got")
+                                                
                 })
             }
         }
     }
-    /*@objc private func image(path: String, didFinishSavingWithError error: NSError?, contextInfo: UnsafeMutableRawPointer?) {
-        
-        print("path")
-        analyse(path: path)
-         // That's the path you want
-    }
-    
-
-    func fetchPhotos () {
-        var image = NSMutableArray()
-        totalImageCountNeeded = 1
-        self.fetchPhotoAtIndexFromEnd(0)
-    }
-    func fetchPhotoAtIndexFromEnd(index:Int) {
-        
-        let imgManager = PHImageManager.defaultManager()
-        
-        // Note that if the request is not set to synchronous
-        // the requestImageForAsset will return both the image
-        // and thumbnail; by setting synchronous to true it
-        // will return just the thumbnail
-        var requestOptions = PHImageRequestOptions()
-        requestOptions.synchronous = true
-        
-        // Sort the images by creation date
-        var fetchOptions = PHFetchOptions()
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key:"creationDate", ascending: true)]
-        
-        if let fetchResult: PHFetchResult = PHAsset.fetchAssetsWithMediaType(PHAssetMediaType.Image, options: fetchOptions) {
-            
-            // If the fetch result isn't empty,
-            // proceed with the image request
-            if fetchResult.count > 0 {
-                // Perform the image request
-                imgManager.requestImageForAsset(fetchResult.objectAtIndex(fetchResult.count - 1 - index) as PHAsset, targetSize: view.frame.size, contentMode: PHImageContentMode.AspectFill, options: requestOptions, resultHandler: { (image, _) in
-                    
-                    // Add the returned image to your array
-                    self.images.addObject(image)
-                    
-                    // If you haven't already reached the first
-                    // index of the fetch result and if you haven't
-                    // already stored all of the images you need,
-                    // perform the fetch request again with an
-                    // incremented index
-                    if index + 1 < fetchResult.count && self.images.count < self.totalImageCountNeeded {
-                        self.fetchPhotoAtIndexFromEnd(index + 1)
-                    } else {
-                        // Else you have completed creating your array
-                        println("Completed array: \(self.images)")
-                    }
-                })
-            }
-        }
-    */
-   /* func onYesClicked(image:UIImage){
-        // i'm using optional image here just for example
-        
-            UIImageWriteToSavedPhotosAlbum(
-                image, self,
-                Selector("image:didFinishSavingWithError:contextInfo:"),
-                nil)
-        }\
-    }*/
-    
-    func image(
-        image: UIImage!,
-        didFinishSavingWithError error:NSError!,
-        contextInfo:UnsafePointer<Void>)
-    {
-        print("ggod")
-        // process success/failure here
-    }
-    func image(
-        path: String,
-        didFinishSavingWithError error:NSError!,
-        contextInfo:UnsafePointer<Void>)
-    {
-        print("testing")
-        analyse(path: path)
-        // process success/failure here
-    }
-    
-   /* func saveToDocs(image: UIImage) throws -> URL  {
+   
+   func saveToDocs(image: UIImage) throws -> URL  {
         let imagePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let imageURL = imagePath.appendingPathComponent("\(UUID()).jpeg")
-        let jpegData = UIImageJPEGRepresentation(image, 0.5)
+        let imageURL = imagePath.appendingPathComponent("\(UUID()).png")
+        let jpegData = UIImageJPEGRepresentation(image, 0.35)
         try jpegData?.write(to: imageURL, options: .atomic)
         imageURLOLD = imageURL
         return imageURL
-    }*/
-    /*func removeImage() {
-        
-        let filePath = imageURLOLD
-        do {
-            try FileManager.default.removeItem(at: filePath!)
-        } catch let error as NSError {
-            print(error.debugDescription)
-        }}*/
+    }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         print("here2")
         
-        let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage//info[UIImagePickerControllerReferenceURL] as? URL
+        let pickedImage = info[UIImagePickerControllerOriginalImage] as! UIImage//
         print(pickedImage)
-        saveImage(image: pickedImage)
-        /*let imageName = imageURL.lastPathComponent
-        let documentDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first as! String
-        let localPath = documentDirectory.stringByAppendingPathComponent(imageName)
-        
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let data = UIImagePNGRepresentation(image)
-        data.writeToFile(localPath, atomically: true)
-        
-        let imageData = NSData(contentsOfFile: localPath)!
-        let photoURL = URL(fileURLWithPath: localPath)
-        let imageWithData = UIImage(data: imageData)!*/
-        //var path = try! saveToDocs(image: pickedImage)
-       // analyse(path: imageURL)
-      
+        var localUrl = try! saveToDocs(image: pickedImage)//
+        analyse(path: localUrl)
         
         picker.dismiss(animated: true, completion: nil)
+    
     }
 
-    func analyse(path: String) {
+    func analyse(path: URL) {
         let visualRecognition = VisualRecognition(apiKey: apiKey, version: version)
-        print("in")
+        print("path")
+        print(path)
         
-        let imageSelf = Bundle.main.url(forResource: path, withExtension: "jpg")!//(forResource: path)//Bundle.main.url(forAuxiliaryExecutable: image)
-        //print(imageSelf);
+        let imageSelf = Bundle.main.url(forResource: "download-1", withExtension: "jpg")!//(forResource: path)//Bundle.main.url(forAuxiliaryExecutable: image)
+        print(imageSelf);
         
-//        let jsonObject = {
-//            "images": image
-//        }
-
         let failure = { (error: Error) in print(error) }
-        let classifierID:[String] = ["Untitled_683728389"]
+        let classifierID:[String] = ["Untitled_1208486641"]
         print("starting")
-        visualRecognition.classify(imageFile: imageSelf, classifierIDs: classifierID , language: "en", failure: failure) { classifiedImages in
-            print(classifiedImages)}
-        
-        /*visualRecognition.classify(classifierID,) { classifiedImages in
+        visualRecognition.classify(imageFile: path, classifierIDs: classifierID , language: "en", failure: failure) { classifiedImages in
             print(classifiedImages)
-        }*/
+            if (classifiedImages.images.count > 0){
+                print(classifiedImages.images)
+                print("classification")
+                if(classifiedImages.images[0].classifiers.count > 0){ var classification = classifiedImages.images[0].classifiers[0].classes[0].classification
+                    if(classification == "Negative"){
+                        self.performSegue(withIdentifier: "healthyResults", sender: self)
+                    }
+                }
+            }
+            if let dictionary = classifiedImages as? [String: Any] {
+                print(dictionary)
+                if let classes = dictionary["classification"] as? String {
+                    print(classes)
+                    // access individual value in dictionary
+                }
+            }
+            print("Classification")
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ResultsView {
+            vc.result = "Healthy"
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    /*visualRecognition.classify(image: "https://www.google.ca/search?q=eye&source=lnms&tbm=isch&sa=X&ved=0ahUKEwj104Wh-MjXAhVCy1QKHXXWBnUQ_AUICigB&biw=1280&bih=726#imgrc=IJ6fjoYvmPagyM:", classifierIDs:classifierID , language: "en", failure: failure) { classifiedImages in
-    print(classifiedImages)
-    }*/
+    
     //MARK: - Delegates
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject])

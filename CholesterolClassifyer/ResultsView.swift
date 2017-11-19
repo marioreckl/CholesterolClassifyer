@@ -10,10 +10,11 @@ import Foundation
 import UIKit
 
 class ResultsView: UIViewController {
-    
+    var result: String = ""
     @IBOutlet var resultsLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        resultsLabel.text = result
     }
     
     override func didReceiveMemoryWarning() {

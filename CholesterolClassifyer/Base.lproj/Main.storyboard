@@ -21,21 +21,21 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-Gr-Dxt">
                                 <rect key="frame" x="0.0" y="10" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Yo Eye Ball" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBH-LC-N9J">
-                                <rect key="frame" x="0.0" y="85" width="320" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press The Scan Button To Take A Picture And Detect Levels Of Cholesterol" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBH-LC-N9J">
+                                <rect key="frame" x="0.0" y="50" width="320" height="191"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Yq7-fq-ETJ"/>
+                                    <constraint firstAttribute="height" constant="191" id="Yq7-fq-ETJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-ei-yiR">
-                                <rect key="frame" x="128.5" y="344" width="63" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-ei-yiR">
+                                <rect key="frame" x="86" y="310" width="149" height="91"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hwt-Ic-7Xk"/>
+                                    <constraint firstAttribute="height" constant="91" id="hwt-Ic-7Xk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="Scan">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -47,14 +47,14 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="54g-hB-mLr"/>
-                            <constraint firstItem="Znk-ei-yiR" firstAttribute="centerY" secondItem="3Js-Gr-Dxt" secondAttribute="centerY" constant="75" id="91e-tF-jLs"/>
+                            <constraint firstItem="Znk-ei-yiR" firstAttribute="centerY" secondItem="3Js-Gr-Dxt" secondAttribute="centerY" constant="61.5" id="91e-tF-jLs"/>
                             <constraint firstItem="uBH-LC-N9J" firstAttribute="leading" secondItem="3Js-Gr-Dxt" secondAttribute="leading" id="IIb-cG-2eH"/>
                             <constraint firstItem="Znk-ei-yiR" firstAttribute="centerX" secondItem="3Js-Gr-Dxt" secondAttribute="centerX" id="K4E-sN-5XT"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uBH-LC-N9J" secondAttribute="trailing" id="NaC-VA-Gjv"/>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Y95-OA-f88"/>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c54-3T-lyS"/>
                             <constraint firstItem="uBH-LC-N9J" firstAttribute="width" secondItem="3Js-Gr-Dxt" secondAttribute="width" id="gca-p7-8tx"/>
-                            <constraint firstItem="3Js-Gr-Dxt" firstAttribute="top" secondItem="uBH-LC-N9J" secondAttribute="bottom" constant="-125" id="qVl-fl-nEK"/>
+                            <constraint firstItem="3Js-Gr-Dxt" firstAttribute="top" secondItem="uBH-LC-N9J" secondAttribute="bottom" constant="-240" id="qVl-fl-nEK"/>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ysj-D6-ckr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="37.600000000000001" y="33.733133433283363"/>
+            <point key="canvasLocation" x="37.5" y="32.74647887323944"/>
         </scene>
         <!--Questions View-->
         <scene sceneID="ahk-TC-nEh">
@@ -86,6 +86,8 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="sliderValueChanged:" destination="n7W-Cu-QHZ" eventType="valueChanged" id="xHf-Qy-KJb"/>
+                                    <action selector="valueChanged:" destination="n7W-Cu-QHZ" eventType="valueChanged" id="efh-cS-0Kc"/>
+                                    <action selector="valueChangedWithSender:" destination="n7W-Cu-QHZ" eventType="valueChanged" id="Vgt-Jh-nW8"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPA-yK-BiF">
@@ -141,14 +143,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xWv-0K-32b">
-                                <rect key="frame" x="16" y="100" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-Ky-loG">
-                                <rect key="frame" x="14" y="160" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -161,9 +155,6 @@
                     </view>
                     <connections>
                         <outlet property="AgeSlider" destination="Dzl-jE-9bT" id="7WC-qQ-E23"/>
-                        <outlet property="GetResults" destination="4h9-eP-rn6" id="lla-K6-POf"/>
-                        <outlet property="SwitchForHighBP" destination="xWv-0K-32b" id="eMv-GL-frb"/>
-                        <outlet property="SwitchForHighCholesterol" destination="Na7-Ky-loG" id="E2T-Yp-sZr"/>
                         <outlet property="ageLabel" destination="b5L-a7-i4c" id="cKV-1q-gbg"/>
                         <segue destination="e81-4v-fuL" kind="show" identifier="ShowResults" id="emv-5o-16e"/>
                     </connections>
@@ -183,10 +174,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="y6q-VV-lsn">
                                 <rect key="frame" x="0.0" y="10" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="806-E2-tiO">
-                                <rect key="frame" x="82" y="72" width="138" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="806-E2-tiO">
+                                <rect key="frame" x="33" y="76" width="254" height="202"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -213,6 +204,6 @@
         <image name="background2.png" width="750" height="1334"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="emv-5o-16e"/>
+        <segue reference="Hhw-Jc-jRi"/>
     </inferredMetricsTieBreakers>
 </document>

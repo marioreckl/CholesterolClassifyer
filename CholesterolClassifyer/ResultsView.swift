@@ -10,15 +10,18 @@ import Foundation
 import UIKit
 
 class ResultsView: UIViewController {
-    var result: String = ""
+    var result: String!
     @IBOutlet var resultsLabel: UILabel!
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-    }
-    func viewWillAppear(){
         print("results")
         resultsLabel.text = result
     }
+    /*func viewWillAppear(){
+        print("results")
+        resultsLabel.text = result
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

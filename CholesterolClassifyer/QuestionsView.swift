@@ -11,17 +11,19 @@ import UIKit
 
 class QuestionsView: UIViewController {
     @IBOutlet var AgeSlider: UISlider!
-    @IBOutlet var SwitchForHighCholesterol: UISwitch!
-    @IBOutlet var SwitchForHighBP: UISwitch!
+    @IBOutlet var ageLabel: UILabel!
+    //@IBOutlet var SwitchForHighCholesterol: UISwitch!
+    //@IBOutlet var SwitchForHighBP: UISwitch!
     override func viewDidLoad() {
         super.viewDidLoad()
-        SwitchForHighBP.addTarget(self, action: "switchIsChanged:", for: UIControlEvents.valueChanged)
-        SwitchForHighCholesterol.addTarget(self, action: "switchIsChanged:", for: UIControlEvents.valueChanged)
+        ageLabel.text = "18"
+        //SwitchForHighBP.addTarget(self, action: "switchIsChanged:", for: UIControlEvents.valueChanged)
+        //SwitchForHighCholesterol.addTarget(self, action: "switchIsChanged:", for: UIControlEvents.valueChanged)
     }
     func switchIsChanged(mySwitch: UISwitch) {
        
     }
-    @IBOutlet var ageLabel: UILabel!
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,13 +39,20 @@ class QuestionsView: UIViewController {
         //print(SwitchForHighBP.isOn)
         self.performSegue(withIdentifier: "ShowResults", sender: self)
     }
-    @IBAction func sliderValueChanged(sender: UISlider) {
-        var currentValue = Int(sender.value)
+
+    @IBAction func valueChanged( sender: AnyObject) {
+        //var currentValue = Int(sender.value)
         
-        ageLabel.text = "\(currentValue)"
+        //ageLabel.text = "\(currentValue)"
     }
     func getHealthMessage() -> String{
-        print("returned not healthy")
-        return "Not Healthy"
+        
+        if(AgeSlider.value > 50){
+            return "Nothing our of the ordinary for your age group could be identified, but you should talk to your docotor about high cholesterol"
+        }//else if(SwitchForHighCholesterol.isOn || SwitchForHighBP.isOn){
+            //return "Not further information could be determined from your history"
+        //}
+
+        return "Elevated levels of cholesterol detected, please talk to your doctor about high cholesterol"
     }
 }

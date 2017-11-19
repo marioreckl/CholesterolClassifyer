@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Js-Gr-Dxt">
                                 <rect key="frame" x="0.0" y="10" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Press The Scan Button To Take A Picture And Detect Levels Of Cholesterol" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBH-LC-N9J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press The Scan Button To Take A Picture And Detect Levels Of Cholesterol" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBH-LC-N9J">
                                 <rect key="frame" x="0.0" y="50" width="320" height="191"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="191" id="Yq7-fq-ETJ"/>
@@ -30,9 +30,10 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-ei-yiR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Znk-ei-yiR">
                                 <rect key="frame" x="86" y="310" width="149" height="91"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="149" id="Lz7-VB-xf5"/>
                                     <constraint firstAttribute="height" constant="91" id="hwt-Ic-7Xk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
@@ -54,7 +55,7 @@
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Y95-OA-f88"/>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c54-3T-lyS"/>
                             <constraint firstItem="uBH-LC-N9J" firstAttribute="width" secondItem="3Js-Gr-Dxt" secondAttribute="width" id="gca-p7-8tx"/>
-                            <constraint firstItem="3Js-Gr-Dxt" firstAttribute="top" secondItem="uBH-LC-N9J" secondAttribute="bottom" constant="-240" id="qVl-fl-nEK"/>
+                            <constraint firstItem="3Js-Gr-Dxt" firstAttribute="top" secondItem="uBH-LC-N9J" secondAttribute="bottom" constant="-231" id="qVl-fl-nEK"/>
                             <constraint firstItem="3Js-Gr-Dxt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ysj-D6-ckr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -174,8 +175,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background2.png" translatesAutoresizingMaskIntoConstraints="NO" id="y6q-VV-lsn">
                                 <rect key="frame" x="0.0" y="10" width="320" height="568"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="806-E2-tiO">
-                                <rect key="frame" x="33" y="76" width="254" height="202"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="806-E2-tiO">
+                                <rect key="frame" x="33" y="76" width="254" height="383"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

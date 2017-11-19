@@ -14,7 +14,7 @@ import Photos
 class InitailView: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     let apiKey = "8d7aced8efa9ce11cca985d203dce5989cc20148"
     let version = "2017-08-10" // use today's date for the most recent version
-    var resultString = "Elevated Levels of cholesterol not detected"
+    var resultString = "Elevated Levels Of Cholesterol NOT Been Detected"
     
     let picker = UIImagePickerController()
     
